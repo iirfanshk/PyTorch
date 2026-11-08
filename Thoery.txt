@@ -1,0 +1,21 @@
+Phase 1: Tensors and setup
+Tensors: is like a box where it stores numbers , and during learniing phase or model training, 
+an optimizer updates the numbers using gradients to minimize the loss or mistakes. 
+
+AUTOGRAD AND TRAINING
+Autograd is PyTorch's automatic differentiation engine.
+
+It calculates how much each learnable parameter contributes to the change in the loss (error).
+
+import torch
+x = torch.tensor(2.0) --> its a normal tensor
+y = torch.tensor(3.0, requires_grad=True) --> here requires_grad tells pytorch to keep the track of 
+variable cux it may need to calculate its gradient
+
+y_true = torch.tensor(10.0) --> its actual number model needs to predict close to 10
+pred = x * y
+loss = (pred - y_true)**2 --> mean squared error
+
+print(loss)
+loss.backward() -->how much loss changes when a particular variable changes slighlty
+print(y.grad) --> its stores the gradiant .
