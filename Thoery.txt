@@ -19,3 +19,9 @@ loss = (pred - y_true)**2 --> mean squared error
 print(loss)
 loss.backward() -->how much loss changes when a particular variable changes slighlty
 print(y.grad) --> its stores the gradiant .
+
+TRAINING LOOP
+A training loop is a process where a model repeatedly makes predictions, 
+calculates the loss, and uses gradients to update its learnable parameters.
+
+This process repeats for multiple epochs until the model learns the patterns and minimizes the prediction error.
